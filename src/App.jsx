@@ -8,25 +8,25 @@ import {
 // DEFAULT PORTFOLIO DATA
 // ──────────────────────────────────────────────────────────────────────────────
 const DEFAULT_PORTFOLIO = [
+  // 국내 배당주
+  { id:'kr-div-1', category:'국내 배당주', sector:'통신',   name:'SK텔레콤',          code:'017670', ticker:'017670', yahooTicker:'017670.KS', targetWeight:5,  currentPrice:52000,   autoTrade:true, currency:'KRW' },
+  { id:'kr-div-2', category:'국내 배당주', sector:'소비재', name:'KT&G',              code:'033780', ticker:'033780', yahooTicker:'033780.KS', targetWeight:5,  currentPrice:90000,   autoTrade:true, currency:'KRW' },
+  { id:'kr-div-3', category:'국내 배당주', sector:'인프라', name:'맥쿼리인프라',      code:'088980', ticker:'088980', yahooTicker:'088980.KS', targetWeight:5,  currentPrice:14000,   autoTrade:true, currency:'KRW' },
   // 국내 성장주
-  { id:'kr-1',  category:'국내 성장주', sector:'반도체',   name:'삼성전자',          code:'005930', ticker:'005930',  yahooTicker:'005930.KS',  targetWeight:6,  currentPrice:292500,  autoTrade:true, currency:'KRW' },
-  { id:'kr-2',  category:'국내 성장주', sector:'로봇',     name:'두산로보틱스',      code:'454910', ticker:'454910',  yahooTicker:'454910.KS',  targetWeight:4,  currentPrice:70000,   autoTrade:true, currency:'KRW' },
-  { id:'kr-3',  category:'국내 성장주', sector:'2차전지',  name:'LG에너지솔루션',    code:'373220', ticker:'373220',  yahooTicker:'373220.KS',  targetWeight:5,  currentPrice:398500,  autoTrade:true, currency:'KRW' },
-  { id:'kr-4',  category:'국내 성장주', sector:'바이오',   name:'삼성바이오로직스',  code:'207940', ticker:'207940',  yahooTicker:'207940.KS',  targetWeight:5,  currentPrice:1415000, autoTrade:true, currency:'KRW' },
-  { id:'kr-5',  category:'국내 성장주', sector:'전력',     name:'HD현대일렉트릭',    code:'267260', ticker:'267260',  yahooTicker:'267260.KS',  targetWeight:4,  currentPrice:300000,  autoTrade:true, currency:'KRW' },
-  { id:'kr-6',  category:'국내 성장주', sector:'방산',     name:'한화에어로스페이스',code:'012450', ticker:'012450',  yahooTicker:'012450.KS',  targetWeight:5,  currentPrice:1261000, autoTrade:true, currency:'KRW' },
-  { id:'kr-7',  category:'국내 성장주', sector:'조선',     name:'HD한국조선해양',    code:'009540', ticker:'009540',  yahooTicker:'009540.KS',  targetWeight:4,  currentPrice:250000,  autoTrade:true, currency:'KRW' },
-  { id:'kr-8',  category:'국내 성장주', sector:'원자력',   name:'두산에너빌리티',    code:'034020', ticker:'034020',  yahooTicker:'034020.KS',  targetWeight:4,  currentPrice:20000,   autoTrade:true, currency:'KRW' },
-  { id:'kr-9',  category:'국내 성장주', sector:'전자부품', name:'삼성전기',          code:'009150', ticker:'009150',  yahooTicker:'009150.KS',  targetWeight:4,  currentPrice:160000,  autoTrade:true, currency:'KRW' },
-  { id:'kr-10', category:'국내 성장주', sector:'전자부품', name:'LG이노텍',          code:'011070', ticker:'011070',  yahooTicker:'011070.KS',  targetWeight:4,  currentPrice:170000,  autoTrade:true, currency:'KRW' },
-  { id:'kr-11', category:'국내 성장주', sector:'자동차',   name:'현대모비스',        code:'012330', ticker:'012330',  yahooTicker:'012330.KS',  targetWeight:5,  currentPrice:260000,  autoTrade:true, currency:'KRW' },
+  { id:'kr-gro-1', category:'국내 성장주', sector:'반도체', name:'삼성전자',          code:'005930', ticker:'005930', yahooTicker:'005930.KS', targetWeight:5,  currentPrice:55000,   autoTrade:true, currency:'KRW' },
+  { id:'kr-gro-2', category:'국내 성장주', sector:'2차전지',name:'LG에너지솔루션',    code:'373220', ticker:'373220', yahooTicker:'373220.KS', targetWeight:5,  currentPrice:380000,  autoTrade:true, currency:'KRW' },
+  { id:'kr-gro-3', category:'국내 성장주', sector:'바이오', name:'삼성바이오로직스',  code:'207940', ticker:'207940', yahooTicker:'207940.KS', targetWeight:5,  currentPrice:900000,  autoTrade:true, currency:'KRW' },
+  { id:'kr-gro-4', category:'국내 성장주', sector:'IT',     name:'NAVER',             code:'035420', ticker:'035420', yahooTicker:'035420.KS', targetWeight:5,  currentPrice:280000,  autoTrade:true, currency:'KRW' },
+  { id:'kr-gro-5', category:'국내 성장주', sector:'자동차', name:'현대차',            code:'005380', ticker:'005380', yahooTicker:'005380.KS', targetWeight:5,  currentPrice:270000,  autoTrade:true, currency:'KRW' },
+  { id:'kr-gro-6', category:'국내 성장주', sector:'방산',   name:'한화에어로스페이스',code:'012450', ticker:'012450', yahooTicker:'012450.KS', targetWeight:5,  currentPrice:800000,  autoTrade:true, currency:'KRW' },
+  { id:'kr-gro-7', category:'국내 성장주', sector:'철강',   name:'POSCO홀딩스',       code:'005490', ticker:'005490', yahooTicker:'005490.KS', targetWeight:5,  currentPrice:350000,  autoTrade:true, currency:'KRW' },
   // 미국 ETF
   { id:'us-1', category:'미국 ETF', sector:'기술',    name:'Invesco QQQM', code:'', ticker:'QQQM', yahooTicker:'QQQM', targetWeight:20, currentPrice:295.02, autoTrade:true, currency:'USD' },
   { id:'us-2', category:'미국 ETF', sector:'배당',    name:'Schwab Div.',  code:'', ticker:'SCHD', yahooTicker:'SCHD', targetWeight:20, currentPrice:32.71,  autoTrade:true, currency:'USD' },
-  { id:'us-3', category:'미국 ETF', sector:'S&P500', name:'SPDR S&P 500', code:'', ticker:'SPY',  yahooTicker:'SPY',  targetWeight:10, currentPrice:744.92, autoTrade:true, currency:'USD' },
+  { id:'us-3', category:'미국 ETF', sector:'S&P500', name:'SPDR S&P 500', code:'', ticker:'SPY',  yahooTicker:'SPY',  targetWeight:10, currentPrice:540,    autoTrade:true, currency:'USD' },
 ];
 
-const LOCAL_KEY = 'ys_portfolio_v2';
+const LOCAL_KEY = 'ys_portfolio_v3';
 const EMPTY_STOCK = { name:'', code:'', yahooTicker:'', sector:'', category:'국내 성장주', targetWeight:3, currentPrice:0, currency:'KRW' };
 
 // ──────────────────────────────────────────────────────────────────────────────
@@ -34,23 +34,24 @@ const EMPTY_STOCK = { name:'', code:'', yahooTicker:'', sector:'', category:'국
 // ──────────────────────────────────────────────────────────────────────────────
 const SECTOR_COLORS = {
   '반도체':   'bg-blue-500/20 text-blue-300 border-blue-500/30',
-  '로봇':     'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
   '2차전지':  'bg-lime-500/20 text-lime-300 border-lime-500/30',
   '바이오':   'bg-pink-500/20 text-pink-300 border-pink-500/30',
-  '전력':     'bg-yellow-500/20 text-yellow-300 border-yellow-500/30',
   '방산':     'bg-red-500/20 text-red-300 border-red-500/30',
-  '조선':     'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
-  '원자력':   'bg-teal-500/20 text-teal-300 border-teal-500/30',
-  '전자부품': 'bg-violet-500/20 text-violet-300 border-violet-500/30',
   '자동차':   'bg-orange-500/20 text-orange-300 border-orange-500/30',
   '기술':     'bg-sky-500/20 text-sky-300 border-sky-500/30',
   '배당':     'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
   'S&P500':   'bg-slate-400/20 text-slate-300 border-slate-400/30',
+  '통신':     'bg-purple-500/20 text-purple-300 border-purple-500/30',
+  '소비재':   'bg-rose-500/20 text-rose-300 border-rose-500/30',
+  '인프라':   'bg-teal-500/20 text-teal-300 border-teal-500/30',
+  'IT':       'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
+  '철강':     'bg-zinc-400/20 text-zinc-300 border-zinc-400/30',
 };
 
 const CAT_STYLE = {
-  '국내 성장주': { accent:'text-amber-400', gradFrom:'from-amber-500/10', border:'border-amber-500/20', badgeBg:'bg-amber-500/20 text-amber-300' },
-  '미국 ETF':    { accent:'text-blue-400',  gradFrom:'from-blue-500/10',  border:'border-blue-500/20',  badgeBg:'bg-blue-500/20 text-blue-300'   },
+  '국내 배당주': { accent:'text-emerald-400', gradFrom:'from-emerald-500/10', border:'border-emerald-500/20', badgeBg:'bg-emerald-500/20 text-emerald-300' },
+  '국내 성장주': { accent:'text-amber-400',   gradFrom:'from-amber-500/10',   border:'border-amber-500/20',   badgeBg:'bg-amber-500/20 text-amber-300'   },
+  '미국 ETF':    { accent:'text-blue-400',    gradFrom:'from-blue-500/10',    border:'border-blue-500/20',    badgeBg:'bg-blue-500/20 text-blue-300'     },
 };
 
 const PRESETS = [[1000000,'100만'], [3000000,'300만'], [5000000,'500만'], [6500000,'650만'], [10000000,'1000만']];
